@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"></meta>
+
+    <!--bootstap advices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="askeroso.css"></link>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script>
+      $(function(){
+        $(".product").load("html/product.html");
+      });
+    </script>
+    <title>Askeroso</title>
+  </head>
+  <body>
+  <section id="container" class="container">
+    <header class="row">
+      <div id="logo" class="col-sm-5 col-md-4">
+        <img src="logo.png"></img>
+      </div>
+      <div id="login" class="col-sm-7 col-md-8">
+        <form id="loginform">
+          <label for="email"><span>email</span><input type="text" id="email"></label>
+          <label for="email"><span>password</span><input type="password" id="password"></label>
+        </form>
+      </div>
+    </header>
+    <div id="query" class="row">
+      <form id="queryform" method="GET">
+        <input type="text" id="querybox" placeholder="busca aquí una pregunta"><input id="querybutton" type="submit" value="buscar!"></input>
+      </form>
+    </div>
+    <nav class="row">
+        <ul id="navigation_links">
+          <li><a href="/questions">Últimas preguntas</a></li>
+          <li><a href="/questions/myquestions">Mis preguntas</a></li>
+          <li><a href="/questions/answeredbyme">Mis respuestas</a></li>
+        </ul>
+    </nav>
+    <div class="row" id="pagecontent">
+      <section id="maincontent" class="col-md-8">
+
+        <article class="question">
+          <p class="question_date">Hace 5 minutos...</p>
+          <p class="question_title"><a href="questions/view/1">Mi coche está trucado?</a></p>
+          <p class="question_author">, se preguntó <a href="users/view/7">jaime</a></span></p>
+          <p class="question_answers">sin respuestas todavía</span></p>
+        </article>
+
+        <article class="question">
+          <p class="question_date">Hace 1 hora...</p>
+          <p class="question_title"><a href="questions/view/2">Cómo se hace tiramisú</a></p>
+          <p class="question_author">, se preguntó <a href="users/view/9">Jose</a></span></p>
+          <p class="question_answers">2 respuestas</span></p>
+        </article>
+
+        <article class="question">
+          <p class="question_date">Ayer...</p>
+          <p class="question_title"><a href="questions/view/3">Cómo iniciarme en JavaScript?</a></p>
+          <p class="question_author">, se preguntó <a href="users/view/7">María</a></span></p>
+          <p class="question_answers">10 respuestas</span></p>
+        </article>
+
+        <article class="question">
+          <p class="question_date">El sábado pasado...</p>
+          <p class="question_title"><a href="questions/view/1">Cuántos siglos tarda en arrancar Inkscape?</a></p>
+          <p class="question_author">, se preguntó <a href="users/view/7">Jaime</a></span></p>
+          <p class="question_answers">sin respuestas todavía</span></p>
+        </article>
+
+        <article class="question">
+          <p class="question_date">El 1 de septiembre...</p>
+          <p class="question_title"><a href="questions/view/1">Teruel existe?</a></p>
+          <p class="question_author">, se preguntó <a href="users/view/7">María</a></span></p>
+          <p class="question_answers">1 respuesta</span></p>
+        </article>
+
+      </section>
+      <aside id="complementary_content" class="col-md-4">
+        <section id="more_answered">
+          <h1>+ respondidas</h1>
+          <ul>
+            <li><a href="/question/view/1">Mi coche está trucado?</a></li>
+            <li><a href="/question/view/2">Cómo iniciarme en PHP?</a></li>
+            <li><a href="/question/view/3">Cuándo empieza la Liga?</a></li>
+            <li><a href="/question/view/4">Cómo renovar el DNI?</a></li>
+          </ul>
+        </section>
+
+        <section id="answerers">
+          <h1>+ respondones</h1>
+          <ul>
+            <li><a href="/user/view/1">Jaime (7)?</a></li>
+            <li><a href="/user/view/1">Eva (6)</a></li>
+            <li><a href="/user/view/1">Jose (3)</a></li>
+            <li><a href="/user/view/1">Jose(3)</a></li>
+            <li><a href="/user/view/1">Maria(3)</a></li>
+          </ul>
+        </section>
+
+        <section id="questioners">
+          <h1>+ preguntones</h1>
+          <ul>
+            <li><a href="/user/view/1">Jaime</a></li>
+            <li><a href="/user/view/1">Eva</a></li>
+            <li><a href="/user/view/1">Jose</a></li>
+            <li><a href="/user/view/1">Jose</a></li>
+            <li><a href="/user/view/1">Maria</a></li>
+          </ul>
+        </section>
+
+      </aside>
+    </div>
+    <footer class="row">
+      <form id="newquestionform">
+          <input id="questiontitlebox" type="text" placeholder="Pon aquí el título">
+
+          <textarea id="questionbodyarea" placeholder="Cuéntanos tu vida..."></textarea>
+          <input type="submit" value="preguntar!"></input>
+      </form>
+    </footer>
+  </section>
+  </body>
+</html>

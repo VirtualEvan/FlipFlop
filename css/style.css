@@ -1,59 +1,79 @@
-.head {
-    width: 100%;
-    height: 175px;
+body {
+    font: 14px Helvetica;
+    background: #999999;
+    margin-top: 0px;
+    border: 5px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    display: flex;
+
+    /* all blocks are placed in a row direction, but in mobile layout, each is
+    full-length across main direction, so they will wrap (see in column) */
+    flex-flow: row wrap;
 }
 
-.head .logo {
+header {
+    order: 1;
+}
+
+#mainnavigation {
+    background-color: lightgrey;
+    order: 2;
+}
+
+#maincontent {
+    background-color: red;
+    order: 3;
+}
+
+#news {
+    background-color: lightgrey;
+    order: 4;
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+}
+
+footer {
+    order: 5;
+}
+
+.logo {
     position: relative;
-    display: block;
-    width: 20%;
-    height: 100%;
+    height: 100px;
     background-color: #5ffcff;
     float: left;
 }
 
-.head .title {
+.title {
     position: relative;
-    display: block;
-    width: 60%;
-    height: 100%;
+    height: 100px;
     background-color: #53ffba;
     float: left;
+    flex-flow: row wrap;
 }
 
-.head .login {
+.login {
     position: relative;
-    display: block;
-    width: 20%;
-    height: 100%;
+    height: 100px;
     background-color: #46ff4a;
     float: left;
+    flex-flow: row wrap;
 }
 
 .content {
     position: relative;
-    width: 100%;
     height: 100%;
+    background-color: white;
 }
 
-.content .list {
-    position: relative;
-    width: 75%;
-    min-height: 500px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.product {
-    width: 25%;
-    position: relative;
-    height: 200px;
-    border: 3px solid black
-}
 
 .p-title {
     width: 100%;
-    height: 15%;
+    height: 7%;
     align-content: center;
     font-family: comic-sans;
     font-style: oblique;
@@ -76,10 +96,6 @@
     font-size: 25px;
     overflow: hidden;
 }
-.p-img {
-    height: 60%;
-    width: 100%;
-}
 
 .p-text {
     padding: 5px;
@@ -87,3 +103,211 @@
     font-size: 10px;
     text-align: center;
 }
+
+/* mobile layout: single colum, all items occupy the entire row, so wrap */
+header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
+    flex-basis: 100%;
+}
+
+.product {
+    width: 47.2%;
+    margin: 1%;
+}
+
+.price, .p-text {
+    display: none;
+}
+
+.logo {
+    flex-basis: 0;
+}
+
+.product {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 25px 8px;
+    float: left;
+    height: auto;
+}
+
+.p-img {
+    margin: 5% 5% 1% 5%;
+    width: 90%;
+    height: auto;
+    border: 1px solid;
+    border-radius: 15px 5px;
+}
+
+.search-box {
+    width: 98%;
+    margin: 1%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.p-title {
+    width: 76%;
+    padding: 1%;
+    margin: 1%;
+    height: 11%;
+    align-content: center;
+    font-family: comic-sans;
+    font-style: oblique;
+    text-align: center;
+    float: left;
+    font-size: 19px;
+    word-wrap: break-word;
+    overflow-y: hidden;
+}
+
+.price {
+    width: 20%;
+}
+
+.p-text {
+    padding: 1%;
+    font-family: comic-sans;
+    font-size: 12px;
+    text-align: center;
+    width: 96%;
+    margin: 1%;
+    overflow-y: hidden;
+    height: 13%;
+}
+
+/* Small devices (tablets, 768px and up) */
+/* container width: 750 */
+@media (min-width: 768px) {
+    body {
+        width: 750px;
+        background-color: red;
+    }
+
+    .title {
+        flex-basis: 60%;
+    }
+
+    .login {
+        flex-basis: 40%;
+    }
+
+    .content {
+
+    }
+
+    .product {
+        height: 350px;
+    }
+
+    .p-img {
+        width: 90%;
+        height: 68%;
+    }
+
+    .search-box {
+        width: 80%;
+        margin: 1% 10% 1% 10%;
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+/* container width: 970 */
+@media (min-width: 992px) {
+    body {
+        width: 970px;
+        background-color: yellow;
+    }
+
+    /* article and nav will share the same row */
+    #maincontent {
+        flex-basis: 70%;
+    }
+    #mainnavigation {
+
+    }
+
+    .product {
+        width: 31%;
+        height: 300px;
+    }
+
+    .title {
+        flex-basis: 60%;
+    }
+
+    .login {
+        flex-basis: 40%;
+    }
+
+    .price, .p-text {
+        display: flex;
+    }
+
+    .p-img {
+        width: 90%;
+        height: 67%;
+    }
+
+    .search-box {
+        width: 80%;
+        margin: 1% 10% 1% 10%;
+    }
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+/* container width: 1170px */
+@media (min-width: 1200px) {
+    body {
+        width: 1170px;
+        background-color: green;
+    }
+
+    /* article, nav and aside will share the same row */
+    #maincontent {
+        flex-basis: 60%;
+    }
+    #mainnavigation, #news {
+        flex-basis: 20%;
+    }
+
+    .title {
+        flex-basis: 60%;
+    }
+
+    .login {
+        flex-basis: 20%;
+    }
+
+    .logo {
+        flex-basis: 20%
+    }
+
+    .content {
+        position: relative;
+        height: 100%;
+        background-color: white;
+    }
+
+    .price, .p-text {
+        display: flex;
+    }
+
+    .product {
+        height: 400px;
+    }
+    .p-img {
+        width: 90%;
+        height: 61%;
+    }
+
+    .search-box {
+        width: 80%;
+        margin: 1% 10% 1% 10%;
+    }
+}
+
