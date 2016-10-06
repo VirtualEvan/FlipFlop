@@ -41,6 +41,14 @@ footer {
     order: 5;
 }
 
+.text {
+    font-family: comic-sans;
+    font-style: oblique;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-y: hidden;
+}
+
 /* mobile layout: single colum, all items occupy the entire row, so wrap */
 header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     flex-basis: 100%;
@@ -80,14 +88,6 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     margin: 1%;
 }
 
-.p-text {
-    display: none;
-    padding: 5px;
-    font-family: comic-sans;
-    font-size: 10px;
-    text-align: center;
-}
-
 .logo {
     flex-basis: 0;
 }
@@ -115,36 +115,34 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     border: 1px solid black;
     border-radius: 15px;
     padding: 5px;
-    text-align: center;
 }
 
 .p-title {
-    width: 76%;
+    width: 71%;
     padding: 1%;
     margin: 1%;
     height: 11%;
     align-content: center;
-    font-family: comic-sans;
-    font-style: oblique;
-    text-align: center;
     float: left;
     font-size: 19px;
-    word-wrap: break-word;
-    overflow-y: hidden;
 }
 
-.price {
-    width: 20%;
+.p-price {
+    width: 18%;
+    float: left;
+    border: 1px solid black;
+    border-radius: 5px 5px;
+    max-height: 11%;
+    margin: 1% 4% 1% 0;
+    padding: 1%;
 }
 
 .p-text {
+    display: none;
     padding: 1%;
-    font-family: comic-sans;
     font-size: 12px;
-    text-align: center;
     width: 96%;
     margin: 1%;
-    overflow-y: hidden;
     height: 13%;
 }
 
