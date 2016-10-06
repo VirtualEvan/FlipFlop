@@ -147,6 +147,22 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     height: 13%;
 }
 
+.footer {
+    position: absolute;
+    display: none;
+}
+
+.foot {
+    height: 30px;
+    background-color: darkkhaki;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    border-radius: 10px 10px 0 0;
+}
+
 /* Small devices (tablets, 768px and up) */
 /* container width: 750 */
 @media (min-width: 768px) {
@@ -247,6 +263,10 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
         display: flex;
         height: 12%;
     }
+
+    .footer {
+        display: flex;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -285,11 +305,16 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
 
     .product {
         height: 400px;
+        width: 22.83%;
     }
 
     .p-img {
         width: 90%;
-        height: 61%;
+        height: 45%;
+    }
+
+    .p-title {
+        height: 17%;
     }
 
     .search-box {
@@ -298,7 +323,11 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     }
 
     .p-text {
-        height: 17%;
+        height: 27%;
+        display: flex;
+    }
+
+    .footer {
         display: flex;
     }
 }
