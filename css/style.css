@@ -51,6 +51,11 @@ footer {
     overflow-y: hidden;
 }
 
+.light-border {
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
 /* mobile layout: single colum, all items occupy the entire row, so wrap */
 header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     flex-basis: 100%;
@@ -119,8 +124,33 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     margin: 5% 5% 1% 5%;
     width: 90%;
     height: auto;
-    border: 1px solid;
-    border-radius: 15px 5px;
+}
+
+.img-list {
+    margin: 1%;
+    width: 40%;
+    height: auto;
+    float: left;
+}
+
+.sub-img-box {
+    margin: 1%;
+    height: auto;
+}
+
+.sub-img {
+    width: 30%;
+}
+
+.d-img {
+    width: 100%;
+    height: auto;
+}
+
+.des-head {
+    width: 57%;
+    float: left;
+    margin: 5% 0 5% 0;
 }
 
 .search {
@@ -128,14 +158,18 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     float: left;
 }
 
-.search-box {
+#search-box {
     width: 80%;
     margin: 1%;
     height: 50px;
-    border: 1px solid white;
-    border-radius: 15px;
     padding: 5px;
     background-color: #ff533d;
+}
+
+.up-button {
+    width: 5%;
+    height: 100%;
+    text-decoration: none;
 }
 
 .chat-buttom {
@@ -156,8 +190,6 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
 .p-price {
     width: 18%;
     float: left;
-    border: 1px solid black;
-    border-radius: 5px 5px;
     max-height: 11%;
     margin: 1% 4% 1% 0;
     padding: 1%;
@@ -236,7 +268,7 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
         height: 68%;
     }
 
-    .search-box {
+    #search-box {
         width: 80%;
         margin: 1% 5% 1% 5%;
     }
@@ -303,7 +335,7 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
         display: none;
     }
 
-    .search-box {
+    #search-box {
         width: 80%;
         margin: 1% 10% 1% 10%;
     }
@@ -376,7 +408,7 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
         height: 17%;
     }
 
-    .search-box {
+    #search-box {
         width: 80%;
         margin: 1% 10% 1% 10%;
     }
