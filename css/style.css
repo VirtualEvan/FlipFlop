@@ -47,6 +47,7 @@ footer {
     font-family: comic-sans;
     font-style: oblique;
     text-align: center;
+    color: black;
     word-wrap: break-word;
     overflow-y: hidden;
 }
@@ -55,6 +56,20 @@ footer {
     border: 1px solid black;
     border-radius: 15px;
 }
+
+.button {
+    width: 300px;
+    height: auto;
+    float: right;
+    margin: 1%;
+}
+
+.button-text {
+    font-size: 26px;
+}
+
+A:link {text-decoration:none}
+A:visited {text-decoration:none}
 
 /* mobile layout: single colum, all items occupy the entire row, so wrap */
 header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
