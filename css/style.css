@@ -25,7 +25,7 @@ header {
 }
 
 #maincontent {
-    background-color: red;
+    background-color: #ff1d17;
     order: 3;
 }
 
@@ -89,6 +89,10 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     flex-basis: 100%;
 }
 
+body{
+    background-color: #4a70c8;
+}
+
 .title {
     position: relative;
     height: 100px;
@@ -101,14 +105,14 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
 .logo {
     position: relative;
     height: 100px;
-    background-color: #5ffcff;
+    background-color: #2956bd;
     float: left;
 }
 
 .login {
     position: relative;
     height: 100px;
-    background-color: #46ff4a;
+    background-color: #2956bd;
     float: left;
     flex-flow: row wrap;
 }
@@ -257,13 +261,13 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
 
 .foot {
     height: 30px;
-    background-color: darkkhaki;
+    background-color: #ff533d;
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
     opacity: 0.8;
-    border-radius: 10px 10px 0 0;
+    /*border-radius: 10px 10px 0 0;*/
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -271,7 +275,6 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
 @media (min-width: 768px) {
     body {
         width: 750px;
-        background-color: red;
     }
 
     .title {
@@ -280,6 +283,10 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
 
     .login {
         flex-basis: 32%;
+        background-color: #2956bd;
+    }
+
+    .logo{
         background-color: #2956bd;
     }
 
@@ -321,7 +328,7 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
 @media (min-width: 992px) {
     body {
         width: 970px;
-        background-color: yellow;
+        background-color: #4a70c8;
     }
 
     /* article and nav will share the same row */
@@ -340,6 +347,7 @@ header, #news, #maincontent, #mainnavigation, footer , .title, .login, .content{
     .logo {
         flex-basis: 15%;
         background: url("../img/logo2.png");
+        background-color: #2956bd;
     }
 
     .title {
