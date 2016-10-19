@@ -68,6 +68,19 @@ footer {
     font-size: 26px;
 }
 
+.chat-tab {
+    position: relative;
+    display: table;
+    width: 10%;
+    height: 90%;
+    background-color: silver;
+}
+
+.chat-tab .text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 A:link {text-decoration:none}
 A:visited {text-decoration:none}
 
